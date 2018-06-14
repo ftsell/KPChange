@@ -8,18 +8,24 @@ using KeePassLib.Security;
 
 namespace KPChange
 {
-    public class GlobalChanger
+    
+    /// <summary>
+    /// Class that handles global KeePass interaction like buttons in the Tools Menu 
+    /// </summary>
+    public class GlobalTools
     {
         private IPluginHost _host;
+        private ChangerProvider _changerProvider;
         
-        public GlobalChanger(IPluginHost host)
+        public GlobalTools(IPluginHost host, ChangerProvider changerProvider)
         {
             _host = host;
+            _changerProvider = changerProvider;
             
-            AddToolsItem();
+            AddToolsItems();
         }
 
-        private void AddToolsItem()
+        private void AddToolsItems()
         {
             // Get a reference to the 'Tools' menu item container
             ToolStripItemCollection tsMenu = _host.MainWindow.ToolsMenu.DropDownItems;
@@ -27,16 +33,22 @@ namespace KPChange
             // Add menu item 'Do Something'
             ToolStripMenuItem tsmi = new ToolStripMenuItem();
             tsmi.Text = "Change all expired passwords";
-            tsmi.Click += this.OnMenuClick;
+            tsmi.Click += this.ChangeExpiredPasswords;
             tsMenu.Add(tsmi);
         }
 
-        private void OnMenuClick(Object sender, EventArgs e)
+        public void ChangeExpiredPasswords(Object sender=null, EventArgs e=null)
         {
             if (!_host.Database.IsOpen)
                 return;
 
             HashSet<PwEntry> expEntries = FindExpiredEntries();
+
+            foreach (var entry in expEntries)
+            {
+                _changerProvider.GetChanger(entry).ChangePassword(entry);
+            }
+            
         }
 
         private HashSet<PwEntry> FindExpiredEntries()

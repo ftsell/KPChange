@@ -7,23 +7,19 @@ namespace KPChange
     {
         
         private IPluginHost _host;
-        private GlobalChanger _globalChanger;
+        private GlobalTools _globalTools;
+        private ChangerProvider _changerProvider;
         
         public override bool Initialize(IPluginHost host)
         {
             if (host == null) return false;
             _host = host;
             
-            _globalChanger = new GlobalChanger(host);
+            _changerProvider = new ChangerProvider();
+            _globalTools = new GlobalTools(host, _changerProvider);
             
             return base.Initialize(host);
         }
 
-        public override void Terminate()
-        {
-            _host = null;
-            
-            base.Terminate();
-        }
     }
 }
