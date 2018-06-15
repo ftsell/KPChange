@@ -46,7 +46,8 @@ namespace KPChange
 
             foreach (var entry in expEntries)
             {
-                _changerProvider.GetChanger(entry).ChangePassword(entry);
+                var x = _changerProvider.GetChanger(entry);
+                x.ChangePassword(entry);
             }
             
         }

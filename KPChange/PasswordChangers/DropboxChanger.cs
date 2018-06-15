@@ -4,11 +4,11 @@ using KeePassLib;
 
 namespace KPChange.PasswordChangers
 {
-    public class GoogleChanger : AbstractPasswordChanger
+    public class DropboxChanger : AbstractPasswordChanger
     {
         
-        protected override Regex _urlMatch => new Regex(@"https://.*\.google\.com");
-
+        protected override Regex _urlMatch => new Regex(@"https://www\.dropbox\.com");
+        
         public override void ChangePassword(PwEntry pwEntry)
         {
             Console.WriteLine(pwEntry.Strings.Get("Title").ReadString() + ": " + this.GetType());

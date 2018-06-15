@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using KeePass;
+﻿using System;
+using System.Collections.Generic;
 using KeePassLib;
 using KPChange.PasswordChangers;
 
@@ -10,24 +10,38 @@ namespace KPChange
     public class ChangerProvider
     {
         
-        public HashSet<IPasswordChanger> Changers = new HashSet<IPasswordChanger>(new []
+        public readonly HashSet<Type> Changers = new HashSet<Type>(new Type[]
         {
-            new GoogleChanger(),
+            typeof(GoogleChanger),
+            typeof(DropboxChanger), 
+            typeof(NotChanger),
         });
 
-        public IPasswordChanger GetAutomaticChanger(PwEntry pwEntry)
+        private AbstractPasswordChanger GetAutomaticChanger(PwEntry pwEntry)
         {
+            int maxPrio = 0;
+            AbstractPasswordChanger bestChanger = null;
+            
             foreach (var changer in Changers)
             {
-                return changer;    // TODO Improve
+
+                AbstractPasswordChanger instance = (AbstractPasswordChanger) Activator.CreateInstance(changer);
+                
+                int prio = instance.DoesHandleEntry(pwEntry);
+                if (prio > maxPrio)
+                {
+                    maxPrio = prio;
+                    bestChanger = instance;
+                }
             }
 
-            return null;
+            return bestChanger;
         }
 
-        public IPasswordChanger GetChanger(PwEntry pwEntry)
+        public AbstractPasswordChanger GetChanger(PwEntry pwEntry)
         {
-            return new GoogleChanger();    // TODO Improve
+            // TODO The user should be able to set their own changer manually
+            return GetAutomaticChanger(pwEntry);
         }
         
     }

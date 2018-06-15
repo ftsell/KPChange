@@ -46,8 +46,10 @@
     <Compile Include="GlobalTools.cs" />
     <Compile Include="KPChange.cs" />
     <Compile Include="ChangerProvider.cs" />
+    <Compile Include="PasswordChangers\DropboxChanger.cs" />
     <Compile Include="PasswordChangers\GoogleChanger.cs" />
-    <Compile Include="PasswordChangers\IPasswordChanger.cs" />
+    <Compile Include="PasswordChangers\AbstractPasswordChanger.cs" />
+    <Compile Include="PasswordChangers\NotChanger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
