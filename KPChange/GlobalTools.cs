@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using KeePass.Plugins;
 using KeePassLib;
 using KeePassLib.Security;
+using KPChange.PasswordChangers;
 
 
 namespace KPChange
@@ -43,12 +44,17 @@ namespace KPChange
                 return;
 
             HashSet<PwEntry> expEntries = FindExpiredEntries();
+            Dictionary<PwEntry, AbstractPasswordChanger> changers = _changerProvider.GetChangers(expEntries);
+            
+            foreach (var changer in changers.Values)
+                changer.OnBegin();
 
-            foreach (var entry in expEntries)
-            {
-                var x = _changerProvider.GetChanger(entry);
-                x.ChangePassword(entry);
-            }
+            // Main change loop
+            foreach (var item in changers)
+                item.Value.ChangePassword(item.Key);
+
+            foreach (var changer in changers.Values)
+                changer.OnEnd();
             
         }
 

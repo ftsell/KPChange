@@ -43,6 +43,16 @@ namespace KPChange
             // TODO The user should be able to set their own changer manually
             return GetAutomaticChanger(pwEntry);
         }
+
+        public Dictionary<PwEntry, AbstractPasswordChanger> GetChangers(HashSet<PwEntry> pwEntries)
+        {
+            Dictionary<PwEntry, AbstractPasswordChanger> result = new Dictionary<PwEntry, AbstractPasswordChanger>();
+
+            foreach (var entry in pwEntries)
+                result.Add(entry, GetChanger(entry));
+            
+            return result;
+        }
         
     }
 }

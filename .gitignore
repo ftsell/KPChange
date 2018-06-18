@@ -2,3 +2,7 @@
 KeePass.exe
 bin
 KPChange/obj
+packages
+plugins/*
+TestDB.kdbx
+TestDB.key

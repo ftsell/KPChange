@@ -4,7 +4,7 @@ using KeePassLib;
 
 namespace KPChange.PasswordChangers
 {
-    public class GoogleChanger : AbstractPasswordChanger
+    public class GoogleChanger : AbstractSeleniumChanger
     {
         
         protected override Regex _urlMatch => new Regex(@"https://.*\.google\.com");
@@ -12,7 +12,8 @@ namespace KPChange.PasswordChangers
         public override void ChangePassword(PwEntry pwEntry)
         {
             Console.WriteLine(pwEntry.Strings.Get("Title").ReadString() + ": " + this.GetType());
+            //Driver.Url = "www.google.de";
         }
-        
+
     }
 }
