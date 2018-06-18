@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using KeePassLib;
+using KeePassLib.Security;
 
 namespace KPChange.PasswordChangers
 {
@@ -39,5 +40,10 @@ namespace KPChange.PasswordChangers
         public virtual void OnEnd() {}
 
         protected string GetUrl(PwEntry pwEntry) => pwEntry.Strings.Get("URL").ReadString();
+
+        protected string GetUsername(PwEntry pwEntry) => pwEntry.Strings.Get("UserName").ReadString();
+
+        protected ProtectedString GetPassword(PwEntry pwEntry) => pwEntry.Strings.Get("Password");
+
     }
 }
