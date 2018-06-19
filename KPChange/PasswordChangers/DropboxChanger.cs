@@ -9,7 +9,7 @@ namespace KPChange.PasswordChangers
         
         protected override Regex _urlMatch => new Regex(@"https://www\.dropbox\.com");
         
-        public override void ChangePassword(PwEntry pwEntry)
+        internal override void ChangePassword(PwEntry pwEntry)
         {
             Console.WriteLine(pwEntry.Strings.Get("Title").ReadString() + ": " + this.GetType());
         }

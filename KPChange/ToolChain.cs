@@ -11,40 +11,26 @@ namespace KPChange
 {
     
     /// <summary>
-    /// Class that handles global KeePass interaction like buttons in the Tools Menu 
+    /// High-Level functionality for performing different actions.
     /// </summary>
-    public class GlobalTools
+    public class ToolChain
     {
-        private IPluginHost _host;
-        private ChangerProvider _changerProvider;
+        private KPChangeExt _plugin;
+        private ToolUtils _utils;
         
-        public GlobalTools(IPluginHost host, ChangerProvider changerProvider)
+        public ToolChain(KPChangeExt plugin)
         {
-            _host = host;
-            _changerProvider = changerProvider;
-            
-            AddToolsItems();
-        }
-
-        private void AddToolsItems()
-        {
-            // Get a reference to the 'Tools' menu item container
-            ToolStripItemCollection tsMenu = _host.MainWindow.ToolsMenu.DropDownItems;
-
-            // Add menu item 'Do Something'
-            ToolStripMenuItem tsmi = new ToolStripMenuItem();
-            tsmi.Text = "Change all expired passwords";
-            tsmi.Click += this.ChangeExpiredPasswords;
-            tsMenu.Add(tsmi);
+            _plugin = plugin;
+            _utils = new ToolUtils(plugin);
         }
 
         public void ChangeExpiredPasswords(Object sender=null, EventArgs e=null)
         {
-            if (!_host.Database.IsOpen)
+            if (!_plugin.Host.Database.IsOpen)
                 return;
 
-            HashSet<PwEntry> expEntries = FindExpiredEntries();
-            Dictionary<PwEntry, AbstractPasswordChanger> changers = _changerProvider.GetChangers(expEntries);
+            HashSet<PwEntry> expEntries = _utils.FindExpiredEntries();
+            Dictionary<PwEntry, AbstractPasswordChanger> changers = _plugin.ChangerProvider.GetChangers(expEntries);
             
             foreach (var changer in changers.Values)
                 changer.OnBegin();
@@ -57,12 +43,24 @@ namespace KPChange
                 changer.OnEnd();
             
         }
+        
+    }
 
-        private HashSet<PwEntry> FindExpiredEntries()
+    internal class ToolUtils
+    {
+        
+        private KPChangeExt _plugin;
+
+        public ToolUtils(KPChangeExt plugin)
+        {
+            _plugin = plugin;
+        }
+
+        internal HashSet<PwEntry> FindExpiredEntries()
         {
             HashSet<PwEntry> result = new HashSet<PwEntry>();
 
-            _host.Database.RootGroup.TraverseTree(TraversalMethod.PreOrder, 
+            _plugin.Host.Database.RootGroup.TraverseTree(TraversalMethod.PreOrder, 
                 // Traverse groups
                 delegate(PwGroup pg)
                 {
@@ -85,6 +83,6 @@ namespace KPChange
             
             return result;
         }
-        
     }
+    
 }

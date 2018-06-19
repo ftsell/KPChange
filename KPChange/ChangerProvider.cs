@@ -38,13 +38,13 @@ namespace KPChange
             return bestChanger;
         }
 
-        public AbstractPasswordChanger GetChanger(PwEntry pwEntry)
+        internal AbstractPasswordChanger GetChanger(PwEntry pwEntry)
         {
             // TODO The user should be able to set their own changer manually
             return GetAutomaticChanger(pwEntry);
         }
 
-        public Dictionary<PwEntry, AbstractPasswordChanger> GetChangers(HashSet<PwEntry> pwEntries)
+        internal Dictionary<PwEntry, AbstractPasswordChanger> GetChangers(HashSet<PwEntry> pwEntries)
         {
             Dictionary<PwEntry, AbstractPasswordChanger> result = new Dictionary<PwEntry, AbstractPasswordChanger>();
 

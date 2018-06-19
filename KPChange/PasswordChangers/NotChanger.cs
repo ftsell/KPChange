@@ -13,11 +13,11 @@ namespace KPChange.PasswordChangers
         
         protected override Regex _urlMatch => null;
 
-        public override void ChangePassword(PwEntry pwEntry)
+        internal override void ChangePassword(PwEntry pwEntry)
         {
             Console.WriteLine(pwEntry.Strings.Get("Title").ReadString() + ": " + this.GetType());
         }
 
-        public override int DoesHandleEntry(PwEntry pwEntry) => 1;
+        internal override int DoesHandleEntry(PwEntry pwEntry) => 1;
     }
 }

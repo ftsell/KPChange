@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using KeePass.Plugins;
 
 namespace KPChange
@@ -6,19 +7,33 @@ namespace KPChange
     public class KPChangeExt : Plugin
     {
         
-        private IPluginHost _host;
-        private GlobalTools _globalTools;
-        private ChangerProvider _changerProvider;
+        internal IPluginHost Host;
+        internal ToolChain ToolChain;
+        internal ChangerProvider ChangerProvider;
         
         public override bool Initialize(IPluginHost host)
         {
             if (host == null) return false;
-            _host = host;
+            Host = host;
             
-            _changerProvider = new ChangerProvider();
-            _globalTools = new GlobalTools(host, _changerProvider);
+            ChangerProvider = new ChangerProvider();
+            ToolChain = new ToolChain(this);
+            
+            AddToolsItems();
             
             return base.Initialize(host);
+        }
+        
+        private void AddToolsItems()
+        {
+            // Get a reference to the 'Tools' menu item container
+            ToolStripItemCollection tsMenu = Host.MainWindow.ToolsMenu.DropDownItems;
+            
+            // Menu Item "Change all expired passwords"
+            ToolStripMenuItem tsmi = new ToolStripMenuItem();
+            tsmi.Text = "Change all expired passwords";
+            tsmi.Click += ToolChain.ChangeExpiredPasswords;
+            tsMenu.Add(tsmi);
         }
 
     }

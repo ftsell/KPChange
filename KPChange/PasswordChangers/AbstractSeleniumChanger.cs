@@ -1,5 +1,6 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.Drawing;
+using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -10,13 +11,13 @@ namespace KPChange.PasswordChangers
 
         protected static readonly IWebDriver Driver = new ChromeDriver();
 
-        public override void OnBegin()
+        internal override void OnBegin()
         {
             base.OnBegin();
             Driver.Manage().Window.Size = new Size(980, 980);
         }
 
-        public override void OnEnd()
+        internal override void OnEnd()
         {
             base.OnEnd();
             //Driver.Quit();

@@ -47,7 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GlobalTools.cs" />
+    <Compile Include="ToolChain.cs" />
     <Compile Include="KPChange.cs" />
     <Compile Include="ChangerProvider.cs" />
     <Compile Include="PasswordChangers\DropboxChanger.cs" />
