@@ -57,7 +57,7 @@
     <Compile Include="src\PasswordChangers\DropboxChanger.cs" />
     <Compile Include="src\PasswordChangers\GoogleChanger.cs" />
     <Compile Include="src\PasswordChangers\NotChanger.cs" />
-    <Compile Include="src\UiManager.cs" />
+    <Compile Include="src\UiHelper.cs" />
     <Compile Include="src\UserControls\PwEditTab.cs">
       <SubType>UserControl</SubType>
     </Compile>

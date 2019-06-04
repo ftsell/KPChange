@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using AutoChange.PasswordChangers;
 using KeePass.Plugins;
-using KeePass.UI;
 using KeePassLib;
 
 namespace AutoChange
