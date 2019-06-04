@@ -28,16 +28,16 @@ namespace AutoChange
             
         }
 
-        internal void RegisterToolsItems()
+        internal void RegisterMenuItems()
         {
             // Get a reference to the 'Tools' menu item container
-            ToolStripItemCollection tsMenu = _plugin.Host.MainWindow.ToolsMenu.DropDownItems;
+            ToolStripItemCollection toolsMenu = _plugin.Host.MainWindow.ToolsMenu.DropDownItems;
             
             // Menu Item "Change all expired passwords"
-            ToolStripMenuItem tsmi = new ToolStripMenuItem();
-            tsmi.Text = "Change all expired passwords";
-            tsmi.Click += _plugin.ToolChain.ChangeExpiredPasswords;
-            tsMenu.Add(tsmi);
+            ToolStripMenuItem menuItem = new ToolStripMenuItem 
+                {Text = "Change all expired passwords"};
+            menuItem.Click += _plugin.ToolChain.ChangeExpiredPasswords;
+            toolsMenu.Add(menuItem);
         }
 
         internal void RegisterFormTabs()

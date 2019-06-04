@@ -22,7 +22,7 @@ namespace AutoChange
             ToolChain = new ToolChain(this);
             Ui = new UiManager(this);
             
-            Ui.RegisterToolsItems();
+            Ui.RegisterMenuItems();
             Ui.RegisterFormTabs();
 
             return true;
