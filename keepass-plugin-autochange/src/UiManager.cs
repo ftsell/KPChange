@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using AutoChange.Forms;
 using KeePass.Forms;
 using KeePass.UI;
 using KeePassLib;
@@ -74,8 +75,8 @@ namespace AutoChange
             TabControl mainTabControl = (TabControl) cs[0];
             
             // Attach my userControl to the window
-            TabPage kpTabPage = new TabPage("KPChange");
-            //kpTabPage.Controls.Add(new PwEntryUserControll(_plugin, entry));
+            TabPage kpTabPage = new TabPage("AutoChange");
+            kpTabPage.Controls.Add(new TestUserControl());
             mainTabControl.TabPages.Add(kpTabPage);
         }
 
