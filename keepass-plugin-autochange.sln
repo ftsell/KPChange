@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPChange", "KPChange\KPChange.csproj", "{1B01A3B2-0A9E-4E80-8A66-3D84760B1A3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "keepass-plugin-autochange", "keepass-plugin-autochange\keepass-plugin-autochange.csproj", "{1B01A3B2-0A9E-4E80-8A66-3D84760B1A3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

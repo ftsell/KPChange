@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using KeePassLib;
 
-namespace KPChange.PasswordChangers
+namespace AutoChange.PasswordChangers
 {
     /// <summary>
     /// This Changer handels absolutely everything with priority one (lowest possible).

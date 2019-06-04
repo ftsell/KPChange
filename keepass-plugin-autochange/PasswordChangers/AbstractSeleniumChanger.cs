@@ -1,10 +1,10 @@
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace KPChange.PasswordChangers
+namespace AutoChange.PasswordChangers
 {
     public abstract class AbstractSeleniumChanger : AbstractPasswordChanger
     {
@@ -21,6 +21,23 @@ namespace KPChange.PasswordChangers
         {
             base.OnEnd();
             //Driver.Quit();
+        }
+
+        protected IWebElement WaitForElement(OpenQA.Selenium.By by)
+        {
+            // We dont use do-while to avoid a selenium staleReferenceException
+            
+            while (!Driver.FindElement(by).Displayed)
+                Thread.Sleep(100);
+
+            return Driver.FindElement(by);
+        }
+
+        protected ReadOnlyCollection<IWebElement> WaitForElements(OpenQA.Selenium.By by)
+        {
+            WaitForElement(by);
+
+            return Driver.FindElements(by);
         }
         
     }

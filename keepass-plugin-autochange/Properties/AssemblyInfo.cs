@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("KPChange")]
-[assembly: AssemblyDescription("Automatically change passwords on popular websites")]
+[assembly: AssemblyTitle("AutoChange")]
+[assembly: AssemblyDescription("Automatically update passwords on popular websites")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Finn-Thorben Sell <contact@finn-thorben.me>")]
+[assembly: AssemblyCompany("Finn-Thorben Sell <dev@finn-thorben.me>")]
 [assembly: AssemblyProduct("KeePass Plugin")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("MIT")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

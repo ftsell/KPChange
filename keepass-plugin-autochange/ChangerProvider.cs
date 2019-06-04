@@ -1,21 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using AutoChange.PasswordChangers;
 using KeePassLib;
-using KPChange.PasswordChangers;
 
 
-namespace KPChange
+namespace AutoChange
 {
     
     public class ChangerProvider
     {
-        
+
+        private AutoChangeExt _plugin;
         public readonly HashSet<Type> Changers = new HashSet<Type>(new Type[]
         {
             typeof(GoogleChanger),
             typeof(DropboxChanger), 
             typeof(NotChanger),
         });
+
+        public ChangerProvider(AutoChangeExt plugin)
+        {
+            _plugin = plugin;
+        }
 
         private AbstractPasswordChanger GetAutomaticChanger(PwEntry pwEntry)
         {
@@ -41,7 +47,12 @@ namespace KPChange
         internal AbstractPasswordChanger GetChanger(PwEntry pwEntry)
         {
             // TODO The user should be able to set their own changer manually
-            return GetAutomaticChanger(pwEntry);
+            AbstractPasswordChanger changer = GetAutomaticChanger(pwEntry);
+
+            changer.Entry = pwEntry;
+            changer.Plugin = _plugin;
+            
+            return changer;
         }
 
         internal Dictionary<PwEntry, AbstractPasswordChanger> GetChangers(HashSet<PwEntry> pwEntries)

@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using KeePassLib;
 
-namespace KPChange.PasswordChangers
+namespace AutoChange.PasswordChangers
 {
     public class DropboxChanger : AbstractPasswordChanger
     {

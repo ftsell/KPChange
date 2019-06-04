@@ -7,8 +7,8 @@
     <ProjectGuid>{1B01A3B2-0A9E-4E80-8A66-3D84760B1A3A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KPChange</RootNamespace>
-    <AssemblyName>KPChange</AssemblyName>
+    <RootNamespace>AutoChange</RootNamespace>
+    <AssemblyName>AutoChange</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="KeePass, Version=2.39.1.14537, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\KeePass.exe</HintPath>
+    <Reference Include="KeePass, Version=2.42.1.20311, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\usr\share\keepass\KeePass.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,8 +48,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoChangeExt.cs" />
     <Compile Include="ToolChain.cs" />
-    <Compile Include="KPChange.cs" />
     <Compile Include="ChangerProvider.cs" />
     <Compile Include="PasswordChangers\DropboxChanger.cs" />
     <Compile Include="PasswordChangers\GoogleChanger.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="PasswordChangers\NotChanger.cs" />
     <Compile Include="PasswordChangers\AbstractSeleniumChanger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UiManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using AutoChange.PasswordChangers;
 using KeePass.Plugins;
 using KeePassLib;
 using KeePassLib.Security;
-using KPChange.PasswordChangers;
 
 
-namespace KPChange
+namespace AutoChange
 {
     
     /// <summary>
@@ -15,10 +15,10 @@ namespace KPChange
     /// </summary>
     public class ToolChain
     {
-        private KPChangeExt _plugin;
-        private ToolUtils _utils;
+        private readonly AutoChangeExt _plugin;
+        private readonly ToolUtils _utils;
         
-        public ToolChain(KPChangeExt plugin)
+        public ToolChain(AutoChangeExt plugin)
         {
             _plugin = plugin;
             _utils = new ToolUtils(plugin);
@@ -37,7 +37,10 @@ namespace KPChange
 
             // Main change loop
             foreach (var item in changers)
+            {
+                _utils.GenerateNewPassword(item.Key);
                 item.Value.ChangePassword(item.Key);
+            }
 
             foreach (var changer in changers.Values)
                 changer.OnEnd();
@@ -49,9 +52,9 @@ namespace KPChange
     internal class ToolUtils
     {
         
-        private KPChangeExt _plugin;
+        private AutoChangeExt _plugin;
 
-        public ToolUtils(KPChangeExt plugin)
+        public ToolUtils(AutoChangeExt plugin)
         {
             _plugin = plugin;
         }
@@ -83,6 +86,12 @@ namespace KPChange
             
             return result;
         }
+
+        internal void GenerateNewPassword(PwEntry pwEntry)
+        {
+            
+        }
+        
     }
     
 }

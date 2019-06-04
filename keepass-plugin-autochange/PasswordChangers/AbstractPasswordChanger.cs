@@ -1,9 +1,10 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using KeePassLib;
 using KeePassLib.Security;
 
-namespace KPChange.PasswordChangers
+namespace AutoChange.PasswordChangers
 {
     
     public abstract class AbstractPasswordChanger
@@ -11,6 +12,8 @@ namespace KPChange.PasswordChangers
 
         protected abstract Regex _urlMatch { get; }
         public bool AutomaticSelect;
+        public PwEntry Entry;
+        public AutoChangeExt Plugin;
 
         protected AbstractPasswordChanger() {}
 
@@ -36,6 +39,11 @@ namespace KPChange.PasswordChangers
         /// Meaning only once at the end even when chaning 5 passwords in a row.
         /// </summary>
         internal virtual void OnEnd() {}
+
+        internal void GenerateNewPassword()
+        {
+            Plugin.Ui.OpenPasswordEditDialog();
+        }
 
         protected string GetUrl(PwEntry pwEntry) => pwEntry.Strings.Get("URL").ReadString();
 

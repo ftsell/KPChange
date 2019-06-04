@@ -21,16 +21,22 @@
 					<CredSaveMode>NoSave</CredSaveMode>
 				</ConnectionInfo>
 				<ConnectionInfo>
-					<Path>../../../home/ftsell/MyKeys.kdbx</Path>
+					<Path>../../../home/ftsell/Nextcloud/MyKeys.kdbx</Path>
+					<CredProtMode>Obf</CredProtMode>
+					<CredSaveMode>NoSave</CredSaveMode>
+				</ConnectionInfo>
+				<ConnectionInfo>
+					<Path>../../../home/ftsell/Nextcloud/MyKeys (conflicted copy 2018-12-05 100250).kdbx</Path>
 					<CredProtMode>Obf</CredProtMode>
 					<CredSaveMode>NoSave</CredSaveMode>
 				</ConnectionInfo>
 			</Items>
 		</MostRecentlyUsed>
 		<WorkingDirectories>
-			<Item>Database@../KPChange</Item>
-			<Item>Attachments@../../../home/ftsell/Desktop</Item>
-			<Item>KeyFile@../KPChange</Item>
+			<Item>Database@../keepass-plugin-autochange</Item>
+			<Item>Attachments@../../../home/ftsell</Item>
+			<Item>Sync@../../../home/ftsell/Nextcloud</Item>
+			<Item>KeyFile@../keepass-plugin-autochange</Item>
 		</WorkingDirectories>
 		<Start>
 			<CheckForUpdate>false</CheckForUpdate>
@@ -41,41 +47,80 @@
 		<TriggerSystem>
 			<Triggers />
 		</TriggerSystem>
+		<PluginCompatibility>
+			<Item>@vTAlm0kYTdh5i52nY6NZYn8SkxOxiQNY9kRnEMNqtec=@2.42.1.20311@1</Item>
+			<Item>@FqbM4rkkSNy5Z3xrexIQqXfEOc9LD6Hpp0QjmMB0KCo=@2.42.1.20311@1</Item>
+			<Item>@+WCbBprG8nU59fwYtrN7WiCTiefuYW4JCe8shQ9wp1A=@2.42.1.20311@1</Item>
+			<Item>@fxJ3nfPHOlmZXohfaG3Vr7uJwD6lQ1uLxnaOqZvccIQ=@2.42.1.20311@1</Item>
+			<Item>@VyEjNXDBhlh/MD5sbT3+oAx//+nIE2rSVtJcJZ2ETjQ=@2.42.1.20311@1</Item>
+			<Item>@OIxXvFouFVouU0RT5tJpAhz3eToMdd4RHmd6Hb65Tps=@2.42.1.20311@1</Item>
+			<Item>@skstX0x+cir96IlWenPzzWDOAi/CBtQTkdZuDvXT9Ko=@2.42.1.20311@1</Item>
+			<Item>@wWA3FrEwiuQk+B/X80nnAKSxN2jDRJ8loKCpUPnM56s=@2.42.1.20311@1</Item>
+			<Item>@IdLiUheZNrVv6bx5XbV60x6MW8VxihkMhdp0A9QsC0k=@2.42.1.20311@1</Item>
+			<Item>@wWA3FrEwiuQk+B/X80nnAKSxN2jDRJ8loKCpUPnM56s=@2.41.0.27365@1</Item>
+			<Item>@2T05qjU7J/VXr5idfxOCj/0JEDZ3lE3e4LuP/uoJwec=@2.41.0.27365@1</Item>
+			<Item>@BB1Tq4Q+coHg9RI5nL3VCfbD+6KuKSNeicXqWVOA4nU=@2.41.0.27365@1</Item>
+			<Item>@e7pgVZbuI8uJVAnpxI4goH7ILVcnQN+4eDfmi+VRLHY=@2.41.0.27365@1</Item>
+			<Item>@7T6Iw7Emk6PwLHqCj7loQ5CleV/NFb43/N2ad9hG680=@2.41.0.27365@1</Item>
+			<Item>@m6WdzWk2eEL567HEeZjxVTAhaw/UncqgLpJFm6fkJJo=@2.41.0.27365@1</Item>
+			<Item>@IdLiUheZNrVv6bx5XbV60x6MW8VxihkMhdp0A9QsC0k=@2.41.0.27365@1</Item>
+			<Item>@C51nQdZqa9rw1A3lZUJq+YuvT11WAqVglqLRSv+2968=@2.40.0.4136@1</Item>
+			<Item>@KNAtB+4ptug/N35jQji1sW4IuW6A8obErJDP7rVn38Y=@2.40.0.4136@1</Item>
+			<Item>@QX+9czzxeD12E+Sx9rtVwH2amnP53FKF+zCUnNUELd4=@2.40.0.4136@1</Item>
+			<Item>@jIebVik4f6Tm9S9n8kBaYY7YbwZenueZ5Z3KDf9676Y=@2.40.0.35472@1</Item>
+			<Item>@c34jzNUpoG1nKd6+xeCfXJC5yR9ie+6NX3vyGsWkkNo=@2.40.0.35472@1</Item>
+			<Item>@RsauxVEnPfOaJ8+ksZK+L6b2visNJ/+AaCLOUc3koO0=@2.40.0.35472@1</Item>
+			<Item>@3qMoyMbR6KHRzYjvuMGl/hctjEtlow295Y1hurqV+LQ=@2.40.0.35472@1</Item>
+			<Item>@7vKCf0Nq6tdw8ZDbAwUM/PMWOW5d+BE74zgIpHScnwA=@2.40.0.35472@1</Item>
+			<Item>@am2WTPiev1qgDdZVObv0lgF6naSUaa5mBpEn+tKMN3g=@2.40.0.35472@1</Item>
+			<Item>@XP2smjLpkM7VuQU509AuuKgQGNRDRm1141r9Haq6FNA=@2.40.0.35472@1</Item>
+			<Item>@Cs0xFimFmCjRNSS0U5ui1y/uWMZxIHj7O9OfeTDf7cQ=@2.40.0.35472@1</Item>
+			<Item>@Cqu98EbgNDXEdvdh/qoj49gwnl+dr+ekirOxhbb1Z2g=@2.40.0.35472@1</Item>
+			<Item>@V/f/AGiDOlbg9AzNMNNLIVSAHeyptRJh3NVJgGdllvk=@2.40.0.35472@1</Item>
+			<Item>@CyX4g+vVU15eXUVWf5/SpE6wX/f+Z+hpLoRfuUHBZqA=@2.40.0.35472@1</Item>
+			<Item>@HbOGuzCuJ2BJEB05734LfeV+u87Nj9GkeVj6cuFrpZI=@2.40.0.35472@1</Item>
+			<Item>@opYN3ZlEfjpEqjj5mC3KoSxD524o8Qp+FMCs2Ap6Xjg=@2.40.0.35472@1</Item>
+			<Item>@P62+dUQ15M6A7DzxnPBPL+PmTsUKFQqdHzBRTjPbs3Y=@2.40.0.35472@1</Item>
+			<Item>@GzRpe7EcpCwaJld3wxH+JpXEpDhdh6x+gmqfADuOHSc=@2.40.0.35472@1</Item>
+			<Item>@/pCtiRxCpAFFqcp4MC3PICk7FSVYPCh2H7apt9t0O0Q=@2.40.0.35472@1</Item>
+			<Item>@AV33lUM4LzVYFOtkJHpnS7wn2ZhB18yH66pLJA71SkU=@2.40.0.35472@1</Item>
+			<Item>@iEaYIrnopL9LIEL7oPrRGQqk87nh4w9GIZ0EEzzmjeg=@2.40.0.35472@1</Item>
+		</PluginCompatibility>
 	</Application>
 	<Logging />
 	<MainWindow>
-		<X>0</X>
-		<Y>80</Y>
-		<Width>3848</Width>
-		<Height>2051</Height>
-		<SplitterHorizontalFrac>0.833245382585752</SplitterHorizontalFrac>
-		<SplitterVerticalFrac>0.25</SplitterVerticalFrac>
-		<Layout>Default</Layout>
-		<ShowFullPathInTitle>true</ShowFullPathInTitle>
+		<X>296</X>
+		<Y>242</Y>
+		<Width>1928</Width>
+		<Height>1154</Height>
+		<SplitterHorizontalFrac>0.8333</SplitterHorizontalFrac>
+		<SplitterVerticalFrac>0.2359375</SplitterVerticalFrac>
+		<CloseButtonMinimizesWindow>true</CloseButtonMinimizesWindow>
+		<DropToBackAfterClipboardCopy>true</DropToBackAfterClipboardCopy>
 		<ToolBar />
 		<EntryView />
 		<TanView />
 		<EntryListColumnCollection>
 			<Column>
 				<Type>Title</Type>
-				<Width>484</Width>
+				<Width>651</Width>
 			</Column>
 			<Column>
 				<Type>UserName</Type>
-				<Width>229</Width>
+				<Width>430</Width>
 			</Column>
 			<Column>
 				<Type>Password</Type>
-				<Width>122</Width>
+				<Width>181</Width>
 				<HideWithAsterisks>true</HideWithAsterisks>
 			</Column>
 			<Column>
 				<Type>Url</Type>
-				<Width>265</Width>
+				<Width>951</Width>
 			</Column>
 			<Column>
 				<Type>Notes</Type>
-				<Width>122</Width>
+				<Width>669</Width>
 			</Column>
 		</EntryListColumnCollection>
 		<EntryListColumnDisplayOrder>0 1 2 3 4</EntryListColumnDisplayOrder>
@@ -86,9 +131,7 @@
 		</ListSorting>
 	</MainWindow>
 	<UI>
-		<TrayIcon>
-			<ShowOnlyIfTrayed>true</ShowOnlyIfTrayed>
-		</TrayIcon>
+		<TrayIcon />
 		<Hiding />
 		<StandardFont>
 			<Family>Microsoft Sans Serif</Family>
@@ -118,7 +161,7 @@
 	</UI>
 	<Security>
 		<WorkspaceLocking>
-			<LockAfterTime>0</LockAfterTime>
+			<LockAfterTime>1800</LockAfterTime>
 			<LockAfterGlobalTime>0</LockAfterGlobalTime>
 		</WorkspaceLocking>
 		<Policy />
@@ -126,7 +169,7 @@
 			<MinimumLength>0</MinimumLength>
 			<MinimumQuality>0</MinimumQuality>
 		</MasterPassword>
-		<ClipboardClearAfterSeconds>20</ClipboardClearAfterSeconds>
+		<ClipboardClearAfterSeconds>18</ClipboardClearAfterSeconds>
 	</Security>
 	<Native />
 	<PasswordGenerator>
@@ -137,26 +180,22 @@
 		</AutoGeneratedPasswordsProfile>
 		<LastUsedProfile>
 			<Name>(Custom)</Name>
-			<GeneratorType>Custom</GeneratorType>
+			<GeneratorType>CharSet</GeneratorType>
 			<Length>20</Length>
 			<CharSetRanges>ULD_______</CharSetRanges>
-			<CustomAlgorithmUuid>7oI1yw2g4ki+MOklBA8hJA==</CustomAlgorithmUuid>
 		</LastUsedProfile>
 		<UserProfiles />
 	</PasswordGenerator>
 	<Defaults>
-		<OptionsTabIndex>5</OptionsTabIndex>
+		<OptionsTabIndex>2</OptionsTabIndex>
 		<SearchParameters>
 			<ComparisonMode>InvariantCultureIgnoreCase</ComparisonMode>
 		</SearchParameters>
 		<KeySources>
 			<Association>
-				<DatabasePath>../../../home/ftsell/Downloads/MyKeys.kdbx</DatabasePath>
+				<DatabasePath>../../../home/ftsell/Nextcloud/MyKeys.kdbx</DatabasePath>
 				<Password>true</Password>
-			</Association>
-			<Association>
-				<DatabasePath>../../../home/ftsell/MyKeys.kdbx</DatabasePath>
-				<Password>true</Password>
+				<KeyFilePath>../../../home/ftsell/.keepass-secret</KeyFilePath>
 			</Association>
 			<Association>
 				<DatabasePath>TestDB.kdbx</DatabasePath>
@@ -166,34 +205,15 @@
 	</Defaults>
 	<Integration>
 		<HotKeyGlobalAutoType>0</HotKeyGlobalAutoType>
-		<HotKeySelectedAutoType>0</HotKeySelectedAutoType>
+		<HotKeyGlobalAutoTypePassword>0</HotKeyGlobalAutoTypePassword>
 		<HotKeyShowWindow>0</HotKeyShowWindow>
-		<HotKeyEntryMenu>0</HotKeyEntryMenu>
 		<UrlSchemeOverrides>
 			<BuiltInOverridesEnabled>1</BuiltInOverridesEnabled>
 			<CustomOverrides />
 		</UrlSchemeOverrides>
 		<AutoTypeAbortOnWindows />
-		<ProxyType>System</ProxyType>
-		<ProxyAuthType>Auto</ProxyAuthType>
 	</Integration>
 	<Custom>
-		<Item>
-			<Key>KeePassRPC.version.major</Key>
-			<Value>1</Value>
-		</Item>
-		<Item>
-			<Key>KeePassRPC.version.minor</Key>
-			<Value>8</Value>
-		</Item>
-		<Item>
-			<Key>KeePassRPC.version.build</Key>
-			<Value>0</Value>
-		</Item>
-		<Item>
-			<Key>KeePassRPC.Key.48de11ec-3bae-4b87-bd00-b5c09138049f</Key>
-			<Value>Ddh+3T+AC2QsR8QE8XtNsCcM+Tt2+tvO0hwf0e7XS3WyPlLnhLlI/NPGuK3LJ4ibLzOHruhl8c61A5OLI0p1bphkHH34kTOyMG9vfxtmiRpdbLD7Sdy48Q6wgWfLFr+PL+bJhwcxmvdpwpiwvFG10SUUv5uzqa/8iUPiEM84FwFR4T6EOlqbG4hitdSJIgH+irWs4fDgR+FhspTdXehGaAiK77y18YNH0Aw9Nc0iwdS7DuPjWqZv2MGkpQ9GmjM+RguJ4JecKsJJjtPty8wFWUi/wvQzccNbJlMEMPUflsnfgYIAU2zuL7pkNDwOD0TnMNRIZM42xV4HKX51tRiRUroL9BSiP0CM1VXCQgURchrEl4EvjzlrWBz4ycokfTAWrhvFQam8LxqyXzPJuCeyqnryaRfGFogZvFv2A1v1usGI1RQN3WFeC8i8pBBBqYnGfdvu5li4iZZUMsaUU+LxpdgqUiT8POeU2KwAobh5HYK2izeJb1gVrOrTVBxyoQ5LCukQHHvUSSVzp8ET2lbsQaCm4v9vhnoWdTIAkjwp2abbMi9kGFH5/Og9TEWFW8Yud78zr0n2/kNtuz8YQ8RabsTQxMqa6oS2JRsQCuG9YJ6J0VRkybDRvY51xPpH3yPB4md8Ax/AQq9dP1X5itmyBYJjlEk1Vwn/czDp6ugMwxhyzioW887YjmULmub7fuLXVGjPkQGXbueQpLJylOJOkuD3N7Y110k7+4eXonzCjRR8rccvuNzzeMi3O11LQ0AUgiZ5M5pBvr3LnZTS5oIFmw==</Value>
-		</Item>
 		<Item>
 			<Key>KeeAgent.AlwaysConfirm</Key>
 			<Value>false</Value>
@@ -227,15 +247,15 @@
 			<Value>false</Value>
 		</Item>
 		<Item>
-			<Key>KeeAgent.UserPicksKeyOnRequestIdentities</Key>
+			<Key>KeeAgent.UseWindowsOpenSshPipe</Key>
 			<Value>false</Value>
 		</Item>
 		<Item>
 			<Key>KeeAgent.UnixSocketPath</Key>
-			<Value>/home/ftsell/.ssh/ssh_agent_sock</Value>
+			<Value>~/.ssh/ssh_agent_sock</Value>
 		</Item>
 		<Item>
-			<Key>KeeAgent.UseWindowsOpenSshPipe</Key>
+			<Key>KeeAgent.UserPicksKeyOnRequestIdentities</Key>
 			<Value>false</Value>
 		</Item>
 		<Item>
@@ -243,8 +263,116 @@
 			<Value>false</Value>
 		</Item>
 		<Item>
+			<Key>KeePassHttp_ReceiveCredentialNotification</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_SpecificMatchingOnly</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_UnlockDatabaseRequest</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_AlwaysAllowAccess</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_AlwaysAllowUpdates</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_SearchInAllOpenedDatabases</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_HideExpired</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_MatchSchemes</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_ReturnStringFields</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_ReturnStringFieldsWithKphOnly</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_SortResultByUsername</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_ListenerPort</Key>
+			<Value>19455</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_ListenerHost</Key>
+			<Value>localhost</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.version.major</Key>
+			<Value>1</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.version.minor</Key>
+			<Value>8</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.version.build</Key>
+			<Value>0</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.Key.7883ec6b-c978-47e8-8517-e71484a181ba</Key>
+			<Value>J5aOUA3vKBxaF/NB0XMz4Ka2DBA+0z/rEVrLjnKwo5qnl7eiCqHKcY9XMiDfroCO3s+o5VHFctEzhGBI6Bb3Gxg9codottXzkWDPzUTaQV7YmVwM5rfGKnrH4tGpPoNFUvY1ZZuxCdEBt5A23d4/ojurMkkBp4vslLxp+nopzs9X3BNNF+7h/87cXrQ6q17VaXqaBtvi7eSv5+pJIUvWs8Eb5mmUuThA5tKWHqszuejWndQNqLJJN24OAF+StBXprhhnVAjkqiSMM2vNyZp5YSxdXbaRK0apzkvcCokD/QKGQDAXFqbbOOiXvFJ7/HhkYuXACbDhw8ktirM+Co4KamJ6XANgqctLNBfqjcvoQwg0YTVRNxs0RO4HLqlvKD6YtUd15qMLLsm33eJfx9Ydg8zNckgwBsEq62GMsFv+AcsIKIU32il8zWkVrCI28d7cYGnx2SdOpdleMpra9bR0rgS91VlW0EhUZqI3xSwcIeEi3HLc9YCk+rkMhOxIsdRMwAh3CrJURY4Cg6Liou6PLgoohSys85z9fyDcIkEXLL5huWSGNmKv/FoUfRR3dtkbizZuRQmSVFyBXiRe6y3TI/3ortoQirRUrzV/MhD0iUKVsvToeQ1apV7FiB6Fz8n+7b8Lv082HzKHPmsUWquJitJ4o19vRygnrR9WJ0WOrpUFne3LiOhTSWKZQWE5qXrVqHbyB8KrfxzQVhinmg1LdS9BMcB1rUssKIEdpp4DyiwpAPvk/AodN4dEx3DKmudVRvEuBOAHA/5y3WIWCeX6Yw==</Value>
+		</Item>
+		<Item>
 			<Key>KeePassRPC.KeeFoxWelcomeDisplayed</Key>
 			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.KeeFox.autoCommit</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.KeeFox.editNewEntries</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.KeeFox.backupNewPasswords</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.AuthorisationExpiryTime</Key>
+			<Value>31536000</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.SecurityLevel</Key>
+			<Value>2</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.SecurityLevelClientMinimum</Key>
+			<Value>2</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.webSocket.port</Key>
+			<Value>12546</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.Key.173e45dd-c317-4630-8401-9048d7262fab</Key>
+			<Value>YNTbT+21danp96pffz1F6b3oxpCCrKA4nYkaJGj5j7Pbe1AqWxFmyiiuVSD89IN1dGHlC68FPgNv2rogcb++ysNa60qMr6D9M/tPg90BhNnWzlG48aiJZ+gYujmmXj7S/tKeiy2o0PME8gKlltqqQtsIOiCw0RGZV0LyrtR2SD6Porgt6soyl1NyD5TYP46FrnXrmR/71Q4lPr6e183KMfOk+X5xHdTngFsbO/Jup0ra9lo5i0os0mcjfuoj9YGrrABS5Io6DFKzYXTBQg2nyExspqyYOiz3EkBt1486olked4owx4edh+z53rz9ShLr5hNzz5uvD8TY5JXYBNqAQVcfVktuvRzTlKQjVaGF5Xr2cNr4OzVSmLHi9jEfOYn4NOHg7vH+B/RN2V6We9gXgfhNYu5soeQtoiaKYxVd1YL1ucnRV0ZcuuW3d4YWjSCq1tlUlAaVU/xub2uOxw6AS7d/nZHY2h9vPq9nSGWLylM2xfVVUvmAJyaXPvINWp3LNY8v3pOHyWy/zWEZazJ6Hvg/XfJAYKQrRe4akHDvUxY7aJ+ce4w7naULkn6IndWMluRfpp45y8h32ZuemNIzscx8iNmZRGTT5DnOsThVhFv/BBONOTDiwbl/W7qYZcEUq4j1FldVZKV+dvsPImFAS8pCu5cS9eqMxvA8G63307BRNe48rHk5nfQHaAR0t7YxVA59eDun73pBOje8icmas85XwWaOKIAkLQRbbmDJIoKZXHyvyQkRxnHWf6KQKnFyLo8Aeh+6htIwH9PCzrkfvA==</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.Key.f4140c2a-5af6-43dc-aac5-5be714f713f0</Key>
+			<Value>CvQdmVG6GXnl+I6SVvUq1aXSXn+C5hwWUgNagVYfB9bn3CgbBUwCqvOuP4cCy4ENiQPXu5sCMLmkQAWZu8Ucum7FAgNVct0+1q6Uur0GpRq1sB4yGKwOXoZCtLoGnSeYfurHOloIBNg6uhagdaifHCP868N8dqIskI53sux77ss79WoamWHB8w3AIcpsNoOvNZl0mYMa9dwUdgRPAlrVjgrYGZ3/9XrXzrQQvPqpLNe+ObB72D0098CdJoGiIqat932LZxBlQn0XIcLRS3PdNo/r8C9zf0lZEaQbyz+CVZcPQrGZ3Bek7qfwe7GTe0L/rGfApDy+RCSp1UkAJFJHa8xyZ898xnLIZ/djBB99BGhk8FinpBPRpqd6HU3dAapWD3k8tu3uWOx7RImbyOzYmg4vVYA9ItltX5PObrXbgOeHNpfgnWOJ9fw2WOOFZl7xiE8uFMbBbyG0cIklYo07oxA/gtFoETHJ3raEhQ58DSTa9YrYLx9aIwinJm9w5bXGdeI3N8y3Y3bxB129DYOfVaRyOfbQ7Hg7KBsQYnIBYbZcK/Z/kw/KtCzLxD+OyNuC7yVapCDUiY7TaipysL8QZm9xttmm+vjpFlGIy2hk6wT+q5coONOU8ocL9WLgWyAYs6nYNNH4Y2V1gyTFuROHkNxY2QBa+sopAMM/6Nxi/uMwP3EwFBkWRXWq4PPveCmuN98GAyDh1sMBXh+adeGvy0+ujPodg7tw8uR+5hPriTifB4Y0RrX0I00ds8375GtATQ0C6rpWDt5EgTHwC31udg==</Value>
+		</Item>
+		<Item>
+			<Key>KeePassRPC.Key.c50a4c33-2a66-4883-a9dc-2186d2c3aa7c</Key>
+			<Value>bnWLorSJT5/AmNxaXHPGZxOgUD0kbO1ho+fWleP0pJTZT4YZpQAHUChgWNrFa+v1ljX28GVkT3LVlRsEwh6X+sjLamCeotEsmn7FOO/d4NfRnY+4t9k8BamSKf7nPUzK3YP9LCcK9oRrfoCsKhLLiPwbe0xZH41a81JkMi7U7ofGZJlSuvbqzr7i6Iau9fRCL2HbCGTLMQ0i4oEOWkijW7ABUe4MVyD4Msu1pEV/sTqHDDcXIUeIQM8HpwhdrhejRdcRThVgcVRaBh/zhFjHuuQoxFwi4oOXuLQbQowlKpvJwRIJiOL/OCxFGp38DwZl0Uj4LTKdYWEAu0uei1ZQLjPohHiynGvCCuADO3Tkq5Pa0wZ1Jb1zPQMWJpxUegR8GAi8/GJZdAJUOFmoGAWOEQ6MOtEKwubFJabDSfJGAaMizPiq1Q3NLi6pSYi6FCJKaC5CApIKONEiDatqs0MohGAX7/4o9OzVS87yuy4JdtiE/5zg+8XrNDf2l/vfetaN+9hsW9ddtlSQ2nD4JzwYB1JuvP5kJ2rG9Ips7e+1l/nYeuisQYb28mChsOWMkOdohb+ufJaKcYqz8MPlsC4EJIjc9RJs+2pagKL6+xu6tctitOoi8/DJl3BxdPTjuElUXtgREy0Np8tn0Q8kDF4EsLBNHsf273HrFuf6Y+a3UcXxb3hLunhwTj67Is/qaHbN0BcDe9oTNm1zKP4A8tTDGH4VTfSA/vOl5HbZxpR9V5wLRPXJkDRiaWTxXkWCbn0X9YTUmJcmn6du60vcqL8KVg==</Value>
 		</Item>
 	</Custom>
 </Configuration>
