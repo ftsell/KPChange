@@ -51,12 +51,12 @@
     <Compile Include="src\AutoChangeExt.cs" />
     <Compile Include="src\ChangerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\DbHelper.cs" />
     <Compile Include="src\PasswordChangers\AbstractPasswordChanger.cs" />
     <Compile Include="src\PasswordChangers\AbstractSeleniumChanger.cs" />
     <Compile Include="src\PasswordChangers\DropboxChanger.cs" />
     <Compile Include="src\PasswordChangers\GoogleChanger.cs" />
     <Compile Include="src\PasswordChangers\NotChanger.cs" />
-    <Compile Include="src\ToolChain.cs" />
     <Compile Include="src\UiManager.cs" />
     <Compile Include="src\UserControls\PwEditTab.cs">
       <SubType>UserControl</SubType>

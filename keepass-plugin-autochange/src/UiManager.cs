@@ -36,7 +36,7 @@ namespace AutoChange
             // Menu Item "Change all expired passwords"
             ToolStripMenuItem menuItem = new ToolStripMenuItem 
                 {Text = "Change all expired passwords"};
-            menuItem.Click += _plugin.ToolChain.ChangeExpiredPasswords;
+            menuItem.Click += OnChangeExpiredPasswords;
             toolsMenu.Add(menuItem);
         }
 
@@ -92,6 +92,11 @@ namespace AutoChange
         private void OnOptionsFormShown(object sender, EventArgs args)
         {
             
+        }
+
+        private void OnChangeExpiredPasswords(object sender, EventArgs args)
+        {
+            _plugin.ChangeAllExpiredPasswords();
         }
         
     }
