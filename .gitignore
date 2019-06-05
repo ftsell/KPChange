@@ -1,5 +1,5 @@
 .idea
-*.DotSettings
+*.DotSettings*
 KeePass.exe
 bin
 **/obj
